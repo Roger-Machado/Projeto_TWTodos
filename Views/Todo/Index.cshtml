@@ -29,16 +29,18 @@
           </td>
           <td>
             <a class="btn btn-success btn-sm">Concluir</a>
-            <a class="btn btn-warning btn-sm">Editar</a>
-            <a class="btn btn-danger btn-sm">Excluir</a>
+            <a asp-controller="Todo" asp-action="Edit" asp-route-id="@todo.Id" class="btn btn-warning btn-sm">Editar
+            </a>
+            <a asp-controller="Todo" asp-action="Delete" asp-route-id="@todo.Id" class="btn btn-danger btn-sm">Excluir</a>
           </td>
         </tr>
       }
     </tbody>
   </table>
 }
-else {
+else
+{
   <p>Nenhuma Tarefa Cadastrada</p>
 }
 
-  <a class="btn btn-primary">Nova Tarefa</a>
+<a asp-controller="Todo" asp-action="Create" class="btn btn-primary">Nova Tarefa</a>
